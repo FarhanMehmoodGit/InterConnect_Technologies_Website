@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discuss a requirement or send an RFQ to InterConnect Technologies.">
+    <meta name="theme-color" content="#2082c8">
+    <title>Contact / RFQ | InterConnect Technologies</title>
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=15">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main">
+        <div class="nav-container-full">
+            <a href="index.html" class="logo-text"><span class="lg-i">Inter</span><span class="lg-c">Connect</span> Technologies</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="about.html">About Us</a></li>
+                <li class="has-sub"><a href="products.html">Products</a><button class="sub-toggle" type="button" aria-expanded="false" aria-label="Products submenu"><i class="caret" aria-hidden="true"></i></button>
+                    <ul class="sub-menu">
+                        <li><a href="products.html#engine">Engine Test Cells</a></li>
+                        <li><a href="products.html#equipment">Aerospace Test Equipment</a></li>
+                        <li><a href="products.html#unmanned">Unmanned Systems</a></li>
+                    </ul></li>
+                <li class="has-sub"><a href="services.html">Services</a><button class="sub-toggle" type="button" aria-expanded="false" aria-label="Services submenu"><i class="caret" aria-hidden="true"></i></button>
+                    <ul class="sub-menu">
+                        <li><a href="services.html#spares">Spares &amp; Support</a></li>
+                        <li><a href="services.html#consultancy">Project Consultancy</a></li>
+                    </ul></li>
+            </ul>
+            <div class="nav-right"><a href="contact.html" class="btn btn-primary btn-nav">Contact / RFQ</a></div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+        </div>
+    </nav>
+
+    <main class="contact-page">
+        <div class="container contact-wrap">
+            <div class="contact-intro">
+                <p class="overline">Contact / RFQ</p>
+                <h1>Bring us the requirement, problem or procurement need.</h1>
+                <p>Tell us what you need. We review the scope, align the technical and commercial next step, and respond with a focused consultancy or procurement path.</p>
+                <ul class="hero-points">
+                    <li>Choose <strong>Discuss a requirement</strong> for an early conversation</li>
+                    <li>Choose <strong>Send an RFQ</strong> when you have a defined scope</li>
+                    <li>Supporting drawings or specifications can be sent when we reply</li>
+                </ul>
+            </div>
+
+            <div class="form-card">
+                <form id="rfq-form" novalidate>
+                    <div class="type-switch" role="radiogroup" aria-label="Request type">
+                        <input type="radio" id="t-requirement" name="request_type" value="requirement" checked>
+                        <label for="t-requirement">Discuss a requirement</label>
+                        <input type="radio" id="t-rfq" name="request_type" value="rfq">
+                        <label for="t-rfq">Send an RFQ</label>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field"><label for="name">Full name *</label><input id="name" name="name" required autocomplete="name"></div>
+                        <div class="field"><label for="organisation">Organisation *</label><input id="organisation" name="organisation" required autocomplete="organization"></div>
+                        <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+                        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+                        <div class="field"><label for="country">Country</label><input id="country" name="country" autocomplete="country-name"></div>
+                        <div class="field">
+                            <label for="area">Area of interest *</label>
+                            <select id="area" name="area" required>
+                                <option value="">Select...</option>
+                                <option>Engine Test Cells</option>
+                                <option>Aerospace Test Equipment</option>
+                                <option>Project Consultancy &amp; Management</option>
+                                <option>Unmanned Systems &amp; Life Cycle</option>
+                                <option>Spares &amp; Support</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Changes with the selected area of interest -->
+                        <div class="field full" id="detail-wrap" hidden>
+                            <label for="detail" id="detail-label">Details</label>
+                            <input id="detail" name="area_details" disabled>
+                        </div>
+
+                        <!-- Requirement only -->
+                        <div class="field full" data-only="requirement">
+                            <label for="message">Describe your requirement *</label>
+                            <textarea id="message" name="requirement" required></textarea>
+                        </div>
+                        <div class="field" data-only="requirement">
+                            <label for="contact_pref">Preferred way to reach you</label>
+                            <select id="contact_pref" name="preferred_contact"><option>Email</option><option>Phone</option><option>Video call</option></select>
+                        </div>
+
+                        <!-- RFQ only -->
+                        <div class="field full" data-only="rfq" hidden>
+                            <label for="scope">Scope / technical specification *</label>
+                            <textarea id="scope" name="rfq_scope" required disabled></textarea>
+                        </div>
+                        <div class="field" data-only="rfq" hidden><label for="quantity">Quantity</label><input id="quantity" name="quantity" disabled></div>
+                        <div class="field" data-only="rfq" hidden><label for="delivery">Required delivery date</label><input id="delivery" name="delivery_date" type="date" disabled></div>
+                        <div class="field" data-only="rfq" hidden>
+                            <label for="supply">New supply or refurbishment</label>
+                            <select id="supply" name="supply_type" disabled><option>Not sure yet</option><option>New supply</option><option>Refurbishment</option><option>Both</option></select>
+                        </div>
+                        <div class="field" data-only="rfq" hidden><label for="budget">Indicative budget (optional)</label><input id="budget" name="budget" disabled></div>
+
+                        <div class="field full hp" aria-hidden="true"><label for="_honey">Leave blank</label><input id="_honey" name="_honey" tabindex="-1" autocomplete="off"></div>
+
+                        <div class="field full">
+                            <label class="consent"><input type="checkbox" id="consent" name="consent" value="yes" required> <span>I agree to be contacted about this enquiry. *</span></label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Send enquiry</button>
+                    </div>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </form>
+
+                <div class="form-success" id="form-success" hidden>
+                    <h2>Thank you, we have your enquiry.</h2>
+                    <p>We will review it and get back to you by email.</p>
+                    <button type="button" class="btn btn-secondary" id="again-btn">Send another</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container foot-grid">
+            <div class="foot-brand">
+                <div class="footer-logo"><span class="lg-i">Inter</span><span class="lg-c">Connect</span> Technologies</div>
+                <p>Engine test cells, aerospace test equipment, project consultancy and unmanned systems support.</p>
+            </div>
+            <div><h4>Company</h4><a href="about.html">About Us</a><a href="contact.html">Contact / RFQ</a></div>
+            <div><h4>Products</h4><a href="products.html#engine">Engine Test Cells</a><a href="products.html#equipment">Aerospace Test Equipment</a><a href="products.html#unmanned">Unmanned Systems</a></div>
+            <div><h4>Services</h4><a href="services.html#spares">Spares &amp; Support</a><a href="services.html#consultancy">Project Consultancy</a></div>
+        </div>
+        <div class="container foot-base">
+            <p class="copyright">&copy; <span id="year"></span> InterConnect Technologies. All rights reserved.</p>
+            <a href="#">Impressum</a>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js?v=8"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

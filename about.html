@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InterConnect Technologies: engine test cells, aerospace test equipment, project consultancy and unmanned systems support.">
+    <meta name="theme-color" content="#2082c8">
+    <title>About Us | InterConnect Technologies</title>
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=15">
+    <style>
+        /* Hero list spacing: kept here so it applies even if css/style.css is stale */
+        .hero-text h1 { font-size: clamp(2.3rem, 1.1rem + 3.6vw, 3.8rem); }
+        .hero-desc { margin-bottom: 28px; }
+        .hero-tagline { color: #2082c8; font-weight: 600; font-size: .95rem; margin-bottom: 16px; }
+        .hero-points { list-style: none; display: grid; gap: 14px; max-width: 58ch; margin-bottom: 40px; font-size: .96rem; line-height: 1.55; }
+        .hero-points li { position: relative; padding-left: 22px; }
+        .hero-points li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 6px; height: 6px; border-top: 2px solid #2082c8; border-right: 2px solid #2082c8; transform: rotate(45deg); }
+        .stats-grid { margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="Main">
+        <div class="nav-container-full">
+            <a href="index.html" class="logo-text"><span class="lg-i">Inter</span><span class="lg-c">Connect</span> Technologies</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
+                <li class="has-sub"><a href="products.html">Products</a><button class="sub-toggle" type="button" aria-expanded="false" aria-label="Products submenu"><i class="caret" aria-hidden="true"></i></button>
+                    <ul class="sub-menu">
+                        <li><a href="products.html#engine">Engine Test Cells</a></li>
+                        <li><a href="products.html#equipment">Aerospace Test Equipment</a></li>
+                        <li><a href="products.html#unmanned">Unmanned Systems</a></li>
+                    </ul></li>
+                <li class="has-sub"><a href="services.html">Services</a><button class="sub-toggle" type="button" aria-expanded="false" aria-label="Services submenu"><i class="caret" aria-hidden="true"></i></button>
+                    <ul class="sub-menu">
+                        <li><a href="services.html#spares">Spares &amp; Support</a></li>
+                        <li><a href="services.html#consultancy">Project Consultancy</a></li>
+                    </ul></li>
+            </ul>
+            <div class="nav-right"><a href="contact.html" class="btn btn-primary btn-nav">Contact / RFQ</a></div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container hero-split">
+            <div class="hero-text">
+                <p class="overline rise" style="--d:.05s">Aerospace test systems &amp; technical consultancy</p>
+                <h1 class="rise" style="--d:.15s">Engineering-led aerospace test systems and consultancy.</h1>
+                <p class="hero-desc rise" style="--d:.3s">Engine test cells, aerospace test equipment and system induction consultancy for line and MRO operations, from technical requirement definition through offer evaluation, commercial negotiation and life cycle support.</p>
+                <p class="hero-tagline rise" style="--d:.36s">Trusted where technical rigour and cost discipline matter</p>
+                <ul class="hero-points rise" style="--d:.4s">
+                    <li>Engine test cell supply and refurbishment with leading test cell developers</li>
+                    <li>Line and MRO test equipment: design, development, obsolescence replacement and refurbishment</li>
+                    <li>Technical requirement definition, offer evaluation and commercial negotiation support</li>
+                    <li>UAS / USV solutions with assured life cycle support</li>
+                </ul>
+
+                <div class="stats-grid rise" style="--d:.45s">
+                    <div class="stat-item">
+                        <span class="stat-number"><span data-count="30">30</span>+<small>years</small></span>
+                        <span class="stat-text">Engine testing experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number"><span data-count="40">40</span>+<small>years</small></span>
+                        <span class="stat-text">Aerospace engineering and project management</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta rise" style="--d:.6s">
+                    <a href="contact.html?type=requirement" class="btn btn-primary">Discuss a requirement</a>
+                    <a href="#business" class="btn btn-secondary">Explore capabilities</a>
+                </div>
+            </div>
+
+            <div class="hero-visual rise" style="--d:.3s">
+                <div class="hero-img-wrapper ph" data-label="Add image: Img/aerospace-component.jpg">
+                    <img src="Img/Engine Test Cell pic.jpg" alt="Engine Test-Bed " onerror="this.style.display='none'">
+                    <div class="img-overlay-badge">Aerospace Test Equipment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business areas -->
+    <section id="business" class="business-areas">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>How InterConnect supports aerospace programmes</h2>
+                <p>InterConnect supports aerospace procurement through structured system induction: defining technical requirements, conducting technical scrutiny of the offers received, and advising during commercial negotiations. The objective is a system package that meets the operational requirement at the most viable cost.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card reveal" id="engine">
+                    <div class="card-img-wrapper ph" data-label="Add image: Img/engine-test-cells.jpg">
+                        <img src="Img/Engine Test Cell Pic 2.png" alt="Engine test cells" onerror="this.style.display='none'">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-top"><span class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.827 16.379a6.082 6.082 0 0 1-8.618-7.002l5.412 1.45a6.082 6.082 0 0 1 7.002-8.618l-1.45 5.412a6.082 6.082 0 0 1 8.618 7.002l-5.412-1.45a6.082 6.082 0 0 1-7.002 8.618l1.45-5.412Z"/><path d="M12 12v.01"/></svg></span><span class="card-num">01</span></div>
+                        <h3>Engine Test Cells</h3>
+                        <p>Backed by more than three decades of engine testing experience, we deliver cost-effective engine test solutions in partnership with leading test cell developers, and refurbish used test cells for continued service.</p>
+                        <ul class="card-list">
+                            <li>Test cell supply with leading developers</li>
+                            <li>Refurbishment of used engine test cells</li>
+                            <li>Cost-effective engine testing solutions</li></ul>
+                        <a class="card-link" href="contact.html?type=requirement&amp;area=Engine%20Test%20Cells">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+
+                <div class="card reveal delay-1" id="equipment">
+                    <div class="card-img-wrapper ph" data-label="Add image: Img/aerospace-test-equipment.jpg">
+                        <img src="Img/Fuel Tester- Staley.jpg" alt="Aerospace test equipment" onerror="this.style.display='none'">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-top"><span class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span><span class="card-num">02</span></div>
+                        <h3>Aerospace Test Equipment</h3>
+                        <p>Current-generation test equipment for line and MRO set-up. We design and develop replacements for obsolete equipment and refurbish legacy units to the latest standards.</p>
+                        <ul class="card-list">
+                            <li>Line and MRO set-up</li>
+                            <li>Design and development of replacement equipment</li>
+                            <li>Refurbishment to current standards</li></ul>
+                        <a class="card-link" href="contact.html?type=requirement&amp;area=Aerospace%20Test%20Equipment">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+
+                <div class="card reveal" id="consultancy">
+                    <div class="card-img-wrapper ph" data-label="Add image: Img/project-consultancy.jpg">
+                        <img src="Img/Engine Test Cell pic.jpg" alt="Project consultancy" onerror="this.style.display='none'">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-top"><span class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span><span class="card-num">03</span></div>
+                        <h3>Project Consultancy &amp; Management</h3>
+                        <p>Structured support for system induction: development of technical requirements, technical scrutiny of received offers, and recommendation of the most suitable system package at the most viable cost.</p>
+                        <ul class="card-list">
+                            <li>Technical requirement development</li>
+                            <li>Evaluation of vendor offers</li>
+                            <li>Commercial negotiation support</li></ul>
+                        <a class="card-link" href="contact.html?type=requirement&amp;area=Project%20Consultancy%20%26%20Management">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+
+                <div class="card reveal delay-1" id="unmanned">
+                    <div class="card-img-wrapper ph" data-label="Add image: Img/unmanned-systems.jpg">
+                        <img src="Img/Spying_quadcopter_(cropped).jpg" alt="Unmanned systems" onerror="this.style.display='none'">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-top"><span class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="6" height="6" rx="1.5"/><path d="M9.5 9.5 6 6M14.5 9.5 18 6M9.5 14.5 6 18M14.5 14.5 18 18"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg></span><span class="card-num">04</span></div>
+                        <h3>Unmanned Systems &amp; Life Cycle</h3>
+                        <p>Solutions for UAS and USV requirements, matched to operational needs. Through trusted suppliers, we provide assured life cycle support to keep the fleet operationally viable.</p>
+                        <ul class="card-list">
+                            <li>UAS / USV solutions</li>
+                            <li>Trusted supplier network</li>
+                            <li>Assured life cycle support</li></ul>
+                        <a class="card-link" href="contact.html?type=requirement&amp;area=Unmanned%20Systems%20%26%20Life%20Cycle">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="team-section">
+        <div class="container reveal">
+            <h2>Our Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar" aria-hidden="true">NA</div>
+                    <h3>Mr Nadeem Athar</h3>
+                    <h4>Managing Director</h4>
+                    <p>Aerospace engineer with over four decades of experience in aerospace engineering and business management.</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar" aria-hidden="true">IM</div>
+                    <h3>Mr Imran Mehmood</h3>
+                    <h4>Director Aerospace</h4>
+                    <p>Aerospace engineer with four decades of experience in aero engine MRO, engine testing and project management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="bottom-cta">
+        <div class="container">
+            <div class="cta-panel text-center reveal">
+                <h2>Bring us the requirement,<br>problem, or procurement need.</h2>
+                <p>We review the scope, align the technical and commercial next step, and respond with a focused consultancy or procurement path suited to the requirement.</p>
+                <div class="hero-cta justify-center">
+                    <a href="contact.html?type=requirement" class="btn btn-light">Discuss a requirement</a>
+                    <a href="contact.html?type=rfq" class="btn btn-ghost">Send an RFQ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container foot-grid">
+            <div class="foot-brand">
+                <div class="footer-logo"><span class="lg-i">Inter</span><span class="lg-c">Connect</span> Technologies</div>
+                <p>Engine test cells, aerospace test equipment, project consultancy and unmanned systems support.</p>
+            </div>
+            <div><h4>Company</h4><a href="about.html">About Us</a><a href="contact.html">Contact / RFQ</a></div>
+            <div><h4>Products</h4><a href="products.html#engine">Engine Test Cells</a><a href="products.html#equipment">Aerospace Test Equipment</a><a href="products.html#unmanned">Unmanned Systems</a></div>
+            <div><h4>Services</h4><a href="services.html#spares">Spares &amp; Support</a><a href="services.html#consultancy">Project Consultancy</a></div>
+        </div>
+        <div class="container foot-base">
+            <p class="copyright">&copy; <span id="year"></span> InterConnect Technologies. All rights reserved.</p>
+            <a href="#">Impressum</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js?v=8"></script>
+</body>
+</html>
