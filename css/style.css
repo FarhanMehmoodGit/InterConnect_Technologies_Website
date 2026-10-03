@@ -498,3 +498,32 @@ footer { padding: 36px 0; background: var(--white); border-top: 1px solid var(--
 .car-btn .i-play { display: none; }
 .car-btn[aria-pressed="true"] .i-play { display: block; }
 .car-btn[aria-pressed="true"] .i-pause { display: none; }
+
+/* ===== Products / Services: feature blocks become cards (hover animation matches About Us) ===== */
+.feature { align-items: stretch; gap: 0; padding: 0; margin-top: clamp(28px, 4vw, 48px); background: var(--white); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 18px rgba(11,27,46,.04); }
+main > .feature:last-child { margin-bottom: clamp(56px, 8vw, 110px); }
+.feature .ph { aspect-ratio: auto; min-height: 340px; border-radius: 0; }
+.feature > div:not(.ph) { align-self: center; padding: clamp(28px, 4.5vw, 64px); }
+.feature .ph::after { background: linear-gradient(to top, rgba(32,130,200,.55), transparent 65%); opacity: 0; transition: opacity .5s var(--ease); }
+
+/* Space between the description and the bullets */
+.feature .card-list { margin-top: 28px; padding-top: 22px; }
+.feature p:not(.overline) + p { margin-top: 12px; }
+
+/* Colour changes ease in with the card */
+.feature h2, .feature p, .feature .overline, .feature .card-link, .feature .card-list { transition: color .4s var(--ease), border-color .4s var(--ease); }
+.feature .overline::before { transition: background-color .4s var(--ease); }
+.feature .card-list li::before { transition: border-color .4s var(--ease); }
+
+/* Lift uses "translate" so it never fights the scroll-reveal "transform" */
+.feature, .js .feature.reveal { transition: opacity .8s var(--ease), transform .8s var(--ease), translate .5s var(--ease), background-color .45s var(--ease), border-color .45s var(--ease), box-shadow .55s var(--ease); transition-delay: 0s; }
+.feature:is(:hover, :focus-within) { transform: none; translate: 0 -8px; background: var(--teal); border-color: var(--teal); box-shadow: 0 32px 50px -26px rgba(32,130,200,.6); }
+.feature:is(:hover, :focus-within) .ph::after { opacity: 1; }
+.feature:is(:hover, :focus-within) .ph img { transform: scale(1.06); }
+.feature:is(:hover, :focus-within) h2, .feature:is(:hover, :focus-within) .card-link { color: #fff; }
+.feature:is(:hover, :focus-within) p:not(.overline) { color: rgba(255,255,255,.88); }
+.feature:is(:hover, :focus-within) .overline { color: rgba(255,255,255,.75); }
+.feature:is(:hover, :focus-within) .overline::before { background: rgba(255,255,255,.75); }
+.feature:is(:hover, :focus-within) .card-list { color: #fff; border-color: rgba(255,255,255,.22); }
+.feature:is(:hover, :focus-within) .card-list li::before { border-color: #fff; }
+@media (max-width: 800px) { .feature .ph { min-height: 0; aspect-ratio: 16 / 10; } }
